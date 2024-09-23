@@ -1,0 +1,221 @@
+main {
+  background-color: var(--black);
+  height: calc(100vh - 148.4px - 34px);
+
+  & section#addtask {
+    display: flex;
+    justify-content: center;
+    padding: var(--space5);
+
+    & button {
+      padding: var(--space2) var(--space3);
+      background-color: var(--blue);
+      color: var(--white);
+      border: none;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+
+      & img {
+        height: 20px;
+        margin-right: var(--space2);
+      }
+    }
+
+    & div#addtaskmodal {
+      position: fixed;
+      display: none;
+      width: 40%;
+      background-color: var(--white);
+      padding: var(--space6);
+      border-radius: 20px;
+      filter: drop-shadow(0 0 20px rgba(0, 0, 0, 1.0));
+
+      & > div:first-child {
+        position: fixed;
+        z-index: -1;
+        top: -500px;
+        left: -500px;
+        height: 1000%;
+        width: 1000%;
+        background-color: white;
+        opacity: 0.2;
+      }
+
+      & > img {
+        position: absolute;
+        right: var(--space3);
+        top: var(--space3);
+        height: 30px;
+        width: auto;
+
+        &:hover {
+          box-shadow: none;
+        }
+      }
+      
+      & form {
+        display: flex;
+        flex-direction: column;
+
+        & input {
+          height: 50px;
+          width: 100%;
+          padding: var(--space2);
+          color: var(--blue);
+          font-weight: 800;
+
+          &[name="title"] {
+            font-size: 1.2rem;
+            text-align: center;
+            background-color: transparent;
+            border: none;
+            border-bottom: solid var(--blue) 5px;
+
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+
+        & select {
+          width: 50%;
+          height: 50px;
+          margin: auto;
+          text-align: center;
+          appearance: none;
+          background-color: var(--blue);
+          color: var(--white);
+          font-size: 1.2rem;
+          font-weight: 700;
+          border: none;
+          border-radius: 2px 2px 50px 50px;
+          margin-bottom: var(--space2);
+
+          &:focus {
+            outline: none;
+            filter: brightness(1.2);
+          }
+
+          & option {
+            background-color: var(--white);
+            border: none;
+            outline: none;
+          }
+        }
+
+        & textarea {
+          height: 200px;
+          resize: none;
+          margin-bottom: var(--space2);
+          border: none;
+          border-radius: 20px;
+          padding: var(--space2);
+
+          &:focus {
+            outline: none;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          }
+        }
+
+        & > button {
+          width: 30%;
+          margin: auto;
+          display: flex;
+          justify-content: center;
+          border-radius: 0;
+        }
+      }
+    }
+  }
+
+  & section#boards {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+    & > div {
+      height: 100%;
+      width: 25%;
+
+      & h2 {
+        text-align: center;
+        color: var(--blue);
+      }
+
+      & div.board {
+        height: 100%;
+        width: 100%;
+        border: solid var(--white) 5px;
+        border-radius: 10px;
+        padding: var(--space2);
+
+        &:hover {
+          cursor: grab;
+        }
+
+        &:active {
+          cursor: grabbing;
+        }
+
+        & div.task {
+          background-color: var(--white);
+          padding: var(--space2);
+          border-radius: 5px;
+          margin-bottom: var(--space2);
+
+          &.dragging {
+            opacity: 0.3;
+          }
+
+          &:active {
+            cursor: pointer;
+          }
+
+          & div.title {
+            display: flex;
+            font-weight: 700;
+
+            & img {
+              height: 20px;
+            }
+
+            & > div {
+              display: flex;
+              align-items: center;
+
+              & img {
+                margin-right: var(--space1);
+              }
+
+              & span:hover {
+                cursor: pointer;
+              }
+            }
+
+            & > img {
+              margin-left: auto;
+
+              &:hover {
+                cursor: pointer;
+              }
+
+              &:active {
+                animation: clickable2 0.5s ease-in-out;
+              }
+            }
+          }
+
+          & div.desc {
+            display: none;
+            border-top: solid var(--blue) 1px;
+            margin-top: var(--space2);
+            padding-top: var(--space2);
+          }
+        }
+      }
+    }
+
+  }
+}

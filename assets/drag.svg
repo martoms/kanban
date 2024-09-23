@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="32" viewBox="0 0 20 32">
+  <g id="drag" transform="translate(-14 -8)">
+    <g id="Group_4" data-name="Group 4">
+      <circle id="Ellipse_1" data-name="Ellipse 1" cx="4" cy="4" r="4" transform="translate(14 8)" fill="#75c2f6"/>
+      <circle id="Ellipse_2" data-name="Ellipse 2" cx="4" cy="4" r="4" transform="translate(14 20)" fill="#75c2f6"/>
+      <circle id="Ellipse_3" data-name="Ellipse 3" cx="4" cy="4" r="4" transform="translate(14 32)" fill="#75c2f6"/>
+      <circle id="Ellipse_4" data-name="Ellipse 4" cx="4" cy="4" r="4" transform="translate(26 8)" fill="#75c2f6"/>
+      <circle id="Ellipse_5" data-name="Ellipse 5" cx="4" cy="4" r="4" transform="translate(26 20)" fill="#75c2f6"/>
+      <circle id="Ellipse_6" data-name="Ellipse 6" cx="4" cy="4" r="4" transform="translate(26 32)" fill="#75c2f6"/>
+    </g>
+  </g>
+</svg>

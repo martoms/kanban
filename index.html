@@ -1,0 +1,86 @@
+<html><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/icon" href="assets/marjohn.ico">
+  <link rel="stylesheet" href="index.css">
+  <script src="index.js" defer></script>
+  <title>Kanban</title>
+</head>
+<body>
+<header>
+  <div id="logo">
+    <a href="https://www.linkedin.com/in/m-tomatao/" target="_blank">
+      <img src="assets/marjohn-banner.svg" alt="marjohn">
+    </a>
+  </div>
+  <h1>
+    Kanban
+    <img src="assets/info.svg" alt="info">
+  </h1>
+  <div id="info">
+    <div></div>
+    <div>
+      <h4>Hello! Welcome to my Kanban. 😊</h4>
+      <p>
+        Based on the <code>Callstack</code> pattern, each new task created is placed on the very top of the stack and is given highest priority.
+      </p>
+      <p>
+        When an item is dragged and reordered within the same stack, it will be automatically placed on the top of the stack.
+      </p>
+      <p>
+        The same goes when it is tranferred to a different stack, it will be placed at the very top.
+      </p>
+      <p>
+        Note: For some unknown reason, the 2nd-to-the-last newly created task description cannot be toggled. I've tried everything, but to no avail, I guess. 😓
+      </p>
+    </div>
+  </div>
+</header>
+<main>
+  <section id="addtask">
+    <button id="createtask">
+      <img src="assets/add-w.svg" alt="add.svg">
+      Create Task
+    </button>
+    <div id="addtaskmodal">
+      <div></div>
+      <img class="clickable cancel" src="assets/cancel.svg" alt="cancel.svg">
+      <form>
+        <input type="text" name="title" maxlength="30" placeholder="Input title...">
+        <select name="status" id="status" class="clickable">
+          <option value="todo" selected="">To Do</option>
+          <option value="progress">In Progress</option>
+          <option value="done">Done</option>
+        </select>
+        <textarea type="text" name="desc">        </textarea>
+        <button type="submit">
+          Create
+        </button>
+      </form>
+    </div>
+  </section>
+  <section id="boards">
+    <div id="todo">
+      <h2>To Do</h2>
+      <div class="board dropzone todo">
+      </div>
+    </div>
+    <div id="progress">
+      <h2>
+        In Progress
+      </h2>
+      <div class="board dropzone progress"></div>
+    </div>
+    <div id="done">
+      <h2>
+        Done
+      </h2>
+      <div class="board dropzone done"></div>
+    </div>
+  </section>
+</main>
+<footer>
+  <p>© All Rights Reserved 2024 | Marjohn Tomatao | Vauldex</p>
+</footer>
+
+</body></html>
