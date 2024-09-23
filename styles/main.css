@@ -150,6 +150,7 @@ main {
         border: solid var(--white) 5px;
         border-radius: 10px;
         padding: var(--space2);
+        overflow-y: auto;
 
         &:hover {
           cursor: grab;
@@ -217,5 +218,42 @@ main {
       }
     }
 
+  }
+}
+
+@media (max-width: 450px) {
+  main {
+    & section#addtask {
+
+      & div#addtaskmodal {
+        width: 90%;
+
+        & form {
+
+          & select {
+            width: 80%;
+          }
+        }
+      }
+    }
+
+    & section#boards {
+      flex-direction: column;
+      row-gap: 60px;
+      justify-content: flex-start;
+      height: 68vh;
+
+      & > div {
+        width: 90%;
+        height: 23%;
+        margin: 0 auto;
+
+         & div.board {
+          width: 100%;
+          height: 100%;
+          overflow: auto;
+         }
+      }
+    }
   }
 }
